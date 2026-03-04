@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function initNavbarEffects() {
-    const navbar = document.querySelector(".navbar-stickyness");
+    const navbar = document.querySelector(".navbar-wrapper");
     const heroe = document.querySelector(".heroe");
 
     // Crear elemento fantasma

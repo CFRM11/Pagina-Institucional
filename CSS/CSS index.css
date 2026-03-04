@@ -129,16 +129,19 @@ a {
     pointer-events: auto;
 }
 
-.navbar-stickyness {
+.navbar-wrapper {
     position: relative;
     width: 100%;
     z-index: 999;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.navbar-stickyness.sticky {
+.navbar-wrapper.sticky {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     transform: translateY(-100%);
     animation: slideDown 0.3s ease forwards;
 }
