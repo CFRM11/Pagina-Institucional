@@ -172,7 +172,7 @@ a {
     color: white;
     text-align: left;
     margin-top: 0;
-    padding-top: 0;
+    padding: 0 4rem;
 }
 
 .heroe::before {
@@ -185,21 +185,35 @@ a {
 
 .heroe h1 {
     position: relative;
-    left: 60px;
-    top: 80px;
     font-size: 4rem;
     font-weight: bold;
     z-index: 1;
     max-width: 800px;
+    margin-bottom: 1rem;
 }
 
 .heroe p {
     position: relative;
-    left: 60px;
-    padding-top: 80px;
+    margin-top: 1rem;
     font-size: 2rem;
     z-index: 1;
     max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .heroe {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        min-height: 60vh;
+    }
+
+    .heroe h1 {
+        font-size: 2.2rem;
+    }
+
+    .heroe p {
+        font-size: 1.2rem;
+    }
 }
 
 /* #endregion */
@@ -207,7 +221,7 @@ a {
 /* #region Presentacion */
 .Presentacion-grid {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 5px;
     width: 100%;
 }
