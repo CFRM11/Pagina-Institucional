@@ -42,7 +42,7 @@ a {
 
 .nav-container {
     background-color: #353379;
-    height: 55px;
+    min-height: 55px;
     display: flex;
     align-items: stretch;
 }
@@ -60,7 +60,6 @@ a {
 }
 
 .navbar-nav .nav-link {
-    height: 100%;
     display: flex;
     align-items: center;
 }
@@ -109,6 +108,12 @@ a {
     background-color: transparent;
     box-shadow: none;
     outline: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        height: 100%;
+    }
 }
 
 /* #region Animaciones */
@@ -188,7 +193,7 @@ a {
 
 .heroe h1 {
     position: relative;
-    font-size: 4rem;
+    font-size: clamp(1.8rem, 5vw, 4rem);
     font-weight: bold;
     z-index: 1;
     max-width: 800px;
@@ -198,7 +203,7 @@ a {
 .heroe p {
     position: relative;
     margin-top: 1rem;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);
     z-index: 1;
     max-width: 800px;
 }
@@ -206,16 +211,7 @@ a {
 @media (max-width: 768px) {
     .heroe {
         padding: 2rem 1.5rem;
-        text-align: center;
         min-height: 60vh;
-    }
-
-    .heroe h1 {
-        font-size: 2.2rem;
-    }
-
-    .heroe p {
-        font-size: 1.2rem;
     }
 }
 
@@ -241,10 +237,28 @@ a {
     display: block;
     width: 100%;
     height: auto;
+    min-height: 200px;
     max-height: 380px;
     object-fit: cover;
     margin: 1.3rem auto;
     margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .columna-izquierda img {
+        max-height: 260px;
+        min-height: 180px;
+        margin-right: auto;
+    }
+
+    .columna-izquierda {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .columna-izquierda img {
+        max-height: none;
+    }
 }
 
 .columna-derecha {
@@ -279,6 +293,46 @@ a {
     font-weight: 400;
     max-width: 600px;
 }
+
+@media (max-width: 768px) {
+    .columna-izquierda img {
+        max-height: 260px;
+        min-height: 180px;
+        margin-right: auto;
+    }
+
+    .columna-izquierda {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .columna-izquierda img {
+        max-height: none;
+    }
+
+    .columna-derecha {
+        padding-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+    }
+
+    .columna-derecha h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .columna-derecha h5 {
+        margin: 0 auto 10px auto;
+    }
+
+    .columna-derecha p {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+
 
 /* #endregion */
 
@@ -321,6 +375,17 @@ a {
     width: 50px;
     border-color: none;
     outline: none;
+}
+
+@media (max-width: 576px) {
+    .three-cards {
+        width: 95%;
+        gap: 1rem;
+    }
+
+    .three-cards .card {
+        flex: 1 1 100%;
+    }
 }
 
 /* #region Animaciones Cards */
