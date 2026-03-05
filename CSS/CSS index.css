@@ -47,10 +47,18 @@ a {
     align-items: stretch;
 }
 
-.navbar-nav,
-.navbar-collapse,
-.navbar-nav .nav-item {
-    height: 100%;
+@media (min-width: 992px) {
+
+    .navbar-nav,
+    .navbar-collapse,
+    .navbar-nav .nav-item {
+        height: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .navbar .nav-link {
