@@ -380,7 +380,7 @@ a {
 
 .card-body .btn {
     margin-top: auto;
-    width: 50px;
+    width: fit-content;
     border-color: none;
     outline: none;
 }
