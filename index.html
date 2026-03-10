@@ -17,69 +17,93 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-wrapper">
-        <div class="container-fluid nav-container">
-            <img src="CSS/Imgs/Identidad/Logo.png" alt="Logo" class="d-inline-block align-text-top">
-            <a class="navbar-brand nav-link" href="#">Inicio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <!--  Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Institución
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Historia</a></li>
-                            <li><a class="dropdown-item" href="#">Misión</a></li>
-                            <li><a class="dropdown-item" href="#">Visión</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Alumnos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Horarios</a></li>
-                            <li><a class="dropdown-item" href="#">Mejores Promedios</a></li>
-                            <li><a class="dropdown-item" href="#">Reglamento</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Eventos </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Example</a></li>
-                            <li><a class="dropdown-item" href="#">Example</a></li>
-                            <li><a class="dropdown-item" href="#">Example</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Avisos </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Preinscripciones 2026</a></li>
-                            <li><a class="dropdown-item" href="#"></a></li>
-                            <li><a class="dropdown-item" href="#"></a></li>
-                        </ul>
-                    </li>
-                    <!--  Dropdown end -->
-                </ul>
-                <a class="navbar-brand nav-link ms-auto" href="#">Contacto</a>
+    <div class="topbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-wrap gap-2">
+                <span>📞 618-812-8743</span>
+                <span>📧 contacto@escuelavasconcelos.edu.mx</span>
+            </div>
+            <a href="https://www.facebook.com/" aria-label="Síguenos en Facebook">
+                <img src="CSS/Imgs/facebook.png" alt="Facebook" height="20">
+            </a>
+        </div>
+    </div>
 
+    <div class="navbar-wrapper">
+        <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+            <div class="container-fluid nav-container">
+
+                <a class="navbar-brand" href="#">
+                    <img src="CSS/Imgs/Identidad/Logo.png" alt="Logo Escuela Vasconcelos">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Institución
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Historia</a></li>
+                                <li><a class="dropdown-item" href="#">Misión</a></li>
+                                <li><a class="dropdown-item" href="#">Visión</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Alumnos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Horarios</a></li>
+                                <li><a class="dropdown-item" href="#">Mejores Promedios</a></li>
+                                <li><a class="dropdown-item" href="#">Reglamento</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Eventos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Ejemplo 1</a></li>
+                                <li><a class="dropdown-item" href="#">Ejemplo 2</a></li>
+                                <li><a class="dropdown-item" href="#">Ejemplo 3</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Avisos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Preinscripciones 2026</a></li>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                    <a class="nav-link" href="#">Contacto</a>
+                </div>
 
             </div>
-            <a href="https://www.facebook.com/"><img src="CSS/Imgs/facebook.png" alt="logo_facebook"
-                    class="d-inline-block align-text-top" style="margin-left: 20px; width: auto; height: 30px; "></a>
-        </div>
-    </nav>
+        </nav>
+    </div>
 
     <div class="heroe">
         <h1>Escuela Secundaria General No.4<br> "José Vasconcelos"</h1>
