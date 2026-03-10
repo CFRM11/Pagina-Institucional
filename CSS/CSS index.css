@@ -52,6 +52,24 @@ a {
     }
 }
 
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.topbar-social img {
+    height: 22px;
+    width: auto;
+}
+
 /* #endregion */
 
 /* #region Navbar */
