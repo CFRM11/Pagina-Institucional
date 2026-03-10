@@ -166,6 +166,15 @@ a {
     .navbar-toggler-icon {
         filter: invert(1);
     }
+
+    .navbar-nav .nav-link {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
 }
 
 /* Dropdown */
