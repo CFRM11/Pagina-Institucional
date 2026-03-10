@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initNavbarEffects() {
     const navbar = document.querySelector(".navbar-wrapper");
-    const heroe = document.querySelector(".heroe");
+    const heroe = document.querySelector(".hero");
 
     const placeholder = document.createElement("div");
     placeholder.style.height = navbar.offsetHeight + "px";
