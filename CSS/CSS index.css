@@ -175,7 +175,24 @@ a {
     .navbar-nav .nav-item {
         width: 100%;
     }
+
+
+    .dropdown-menu {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        border: none;
+        transform: none !important;
+    }
+
+    .dropdown-menu.show {
+        height: auto;
+        overflow: visible;
+        padding: 0.5rem 0;
+    }
 }
+
 
 /* Dropdown */
 @media (min-width:992px) {
