@@ -1,0 +1,17 @@
+.card-body .btn:hover,
+.card-body .btn:focus {
+    background-color: #2226a6;
+    border: none;
+    color: white;
+    outline: none;
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    background-color: #eeeeee;
+    border: none;
+    outline: none;
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}

@@ -1,0 +1,47 @@
+.hero {
+    position: relative;
+    background-image: url(../../Assets/Imgs/hero/hero_index.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: left;
+    margin-top: 0;
+    padding: 0 4rem;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero h1 {
+    position: relative;
+    font-size: clamp(1.8rem, 5vw, 4rem);
+    font-weight: bold;
+    z-index: 1;
+    max-width: 800px;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    position: relative;
+    margin-top: 1rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    z-index: 1;
+    max-width: 800px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 1.5rem;
+        min-height: 60vh;
+    }
+}

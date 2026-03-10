@@ -1,0 +1,139 @@
+.navbar-wrapper {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-wrapper.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: slideDown 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar-container {
+    background-color: #353379;
+    min-height: 55px;
+    display: flex;
+    align-items: stretch;
+}
+
+.container-fluid>.navbar-brand img {
+    width: 60px;
+    height: auto;
+    padding-right: 10px;
+}
+
+/* Links */
+.navbar .nav-link {
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:active {
+    color: white;
+    background-color: #4845a8;
+}
+
+.navbar .nav-link:focus {
+    color: white;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Desktop: links ocupan toda la altura del navbar */
+@media (min-width: 992px) {
+
+    .navbar-nav,
+    .navbar-collapse,
+    .navbar-nav .nav-item {
+        height: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        height: 100%;
+    }
+}
+
+/* Móvil: menú expandido con fondo consistente */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: #353379;
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar-toggler-icon {
+        filter: invert(1);
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+
+    .dropdown-menu {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        border: none;
+        transform: none !important;
+    }
+
+    .dropdown-menu.show {
+        height: auto;
+        overflow: visible;
+        padding: 0.5rem 0;
+    }
+}
+
+
+/* Dropdown */
+@media (min-width:992px) {
+    .dropdown-menu {
+        display: block;
+        opacity: 0;
+        transform: translateY(-15px) scale(0.98);
+        transition:
+            opacity 0.3s cubic-bezier(.4, 0, .2, 1),
+            transform 0.3s cubic-bezier(.4, 0, .2, 1);
+        pointer-events: none;
+    }
+
+    .dropdown-menu.show {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+    }
+}

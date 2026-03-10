@@ -1,0 +1,28 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p,
+li,
+span,
+small,
+a {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

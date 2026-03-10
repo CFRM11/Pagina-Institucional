@@ -1,0 +1,38 @@
+.topbar {
+    background-color: #252463;
+    color: white;
+    font-size: 0.85rem;
+    padding: 6px 0;
+}
+
+.topbar span,
+.topbar a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .topbar .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 4px;
+    }
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.topbar-social img {
+    height: 22px;
+    width: auto;
+}
