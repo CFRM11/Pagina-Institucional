@@ -79,9 +79,20 @@
 
 /* Móvil: menú expandido con fondo consistente */
 @media (max-width: 991px) {
+
+    .navbar-wrapper,
+    .main-navbar-container {
+        position: relative;
+    }
+
     .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
         background-color: #353379;
         padding: 0.5rem 1rem;
+        z-index: 1000;
     }
 
     .navbar-toggler {
@@ -101,8 +112,15 @@
         width: 100%;
     }
 
+    .nav-link.dropdown-toggle.show {
+        padding-bottom: 0 !important;
+        margin: 0 !important;
+    }
 
     .dropdown-menu {
+        background-color: #353379;
+        padding: 0;
+        margin: 0;
         height: 0;
         overflow: hidden;
         padding: 0;
@@ -112,9 +130,17 @@
     }
 
     .dropdown-menu.show {
+        padding: 0 !important;
+        margin: 0 !important;
         height: auto;
         overflow: visible;
         padding: 0.5rem 0;
+    }
+
+    .navbar-nav .dropdown-item {
+        color: white;
+        font-weight: 400;
+        padding-left: 1.5rem !important;
     }
 }
 
