@@ -1,6 +1,6 @@
 footer {
-    background-color: #353379;
-    color: white;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     margin-top: 3rem;
 }
 
@@ -46,7 +46,7 @@ footer .footer-contact {
 }
 
 .footer-contact h4 {
-    text-decoration: underline #B3262E 3px solid;
+    text-decoration: underline var(--color-accent) 3px solid;
     text-underline-position: 5;
 }
 
