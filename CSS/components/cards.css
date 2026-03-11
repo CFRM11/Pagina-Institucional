@@ -10,7 +10,7 @@
 .cards-grid .card {
     flex: 1 1 300px;
     justify-content: center;
-    border-color: #d3d3d3;
+    border-color: var(--color-card-border);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -29,7 +29,7 @@
 }
 
 .card-body h5 {
-    text-decoration: underline #B3262E 3px solid;
+    text-decoration: underline var(--color-accent) 3px solid;
 
 }
 
