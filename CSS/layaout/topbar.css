@@ -1,13 +1,13 @@
 .topbar {
-    background-color: #252463;
-    color: white;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
     font-size: 0.85rem;
     padding: 6px 0;
 }
 
 .topbar span,
 .topbar a {
-    color: white;
+    color: var(--color-white);
     text-decoration: none;
 }
 
