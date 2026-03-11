@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     z-index: 999;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
 .navbar-wrapper.sticky {
@@ -10,7 +10,7 @@
     top: 0;
     left: 0;
     right: 0;
-    animation: slideDown 0.3s ease forwards;
+    animation: slideDown var(--transition-base) forwards;
 }
 
 @keyframes slideDown {
@@ -29,7 +29,7 @@
 }
 
 .main-navbar-container {
-    background-color: #353379;
+    background-color: var(--color-primary);
     min-height: 55px;
     display: flex;
     align-items: stretch;
@@ -43,7 +43,7 @@
 
 /* Links */
 .navbar .nav-link {
-    color: white;
+    color: var(--color-white);
     padding-left: 15px;
     padding-right: 15px;
     display: flex;
@@ -52,12 +52,12 @@
 
 .navbar .nav-link:hover,
 .navbar .nav-link:active {
-    color: white;
-    background-color: #4845a8;
+    color: var(--color-white);
+    background-color: var(--color-primary-hover);
 }
 
 .navbar .nav-link:focus {
-    color: white;
+    color: var(--color-white);
     background-color: transparent;
     box-shadow: none;
     outline: none;
@@ -90,7 +90,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #353379;
+        background-color: var(--color-primary);
         padding: 0.5rem 1rem;
         z-index: 1000;
     }
@@ -118,7 +118,7 @@
     }
 
     .dropdown-menu {
-        background-color: #353379;
+        background-color: var(--color-primary);
         display: block !important;
         border: none;
         transform: none !important;
@@ -142,7 +142,7 @@
     }
 
     .navbar-nav .dropdown-item {
-        color: white;
+        color: var(--color-white);
         font-weight: 400;
         padding-left: 1.5rem !important;
     }

@@ -1,0 +1,34 @@
+/* Colores */
+:root {
+    /* Colores Principales */
+    --color-primary: #353379;
+    /* Azul principal */
+    --color-primary-dark: #252463;
+    /* Azul Topbar */
+    --color-primary-hover: #4845a8;
+    /* Hover */
+    --color-primary-btn: #2226a6;
+    /* Buttons */
+
+    /* Detalles*/
+    --color-accent: #B3262E;
+    /* Underline */
+
+    /* Neutros */
+    --color-white: white;
+    --color-card-hover: #eeeeee;
+    --color-card-border: #d3d3d3;
+    --color-text-dark: #1a1a1a;
+}
+
+/* Tipografia */
+:root {
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* Transicion */
+:root {
+    --transition-base: 0.3s ease;
+    --transition-scale: transform 0.4s ease;
+}
