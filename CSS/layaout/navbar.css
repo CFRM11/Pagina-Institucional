@@ -120,8 +120,6 @@
     .dropdown-menu {
         background-color: #353379;
         display: block !important;
-        padding: 0 !important;
-        margin: 0 !important;
         border: none;
         transform: none !important;
 
@@ -129,7 +127,7 @@
         overflow: hidden;
         opacity: 0;
         transition:
-            max-height 0.3s cubic-bezier(.4, 0, .2, 1),
+            max-height 0.45s cubic-bezier(.4, 0, .2, 1),
             opacity 0.25s ease;
     }
 
@@ -137,7 +135,10 @@
         max-height: 500px;
         opacity: 1;
         overflow: hidden;
-        padding: 0.5rem !important;
+
+        transition:
+            max-height 1s cubic-bezier(.4, 0, .2, 1),
+            opacity 0.75s ease;
     }
 
     .navbar-nav .dropdown-item {
