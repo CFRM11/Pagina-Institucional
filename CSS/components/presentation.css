@@ -6,6 +6,8 @@
 }
 
 .presentation-image {
+    display: flex;
+    align-items: stretch;
     margin-left: 5px;
     padding: 20px;
     justify-content: center;
@@ -17,18 +19,16 @@
 .presentation-image img {
     display: block;
     width: 100%;
-    height: auto;
-    min-height: 200px;
-    max-height: 380px;
+    height: 100%;
     object-fit: cover;
+    object-position: center center;
     margin: 1.3rem auto;
     margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
     .presentation-image img {
-        max-height: 260px;
-        min-height: 180px;
+        height: 260px;
         margin-right: auto;
     }
 
@@ -57,7 +57,7 @@
 .presentation-text h5 {
     font-weight: 600;
     color: #ffffff;
-    background-color: var(-color-primary);
+    background-color: var(--color-primary);
     width: max-content;
     text-align: left;
     margin-bottom: 10px;
@@ -79,4 +79,5 @@
 
 .presentation--reverse .presentation-text {
     order: 1;
+    padding-left: 2rem;
 }
