@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    order: 1;
 }
 
 .presentation-image img {
@@ -42,6 +43,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    order: 2;
 }
 
 .presentation-text h1 {
@@ -67,4 +69,14 @@
     font-size: 1rem;
     font-weight: 400;
     max-width: 600px;
+}
+
+/* reverse */
+
+.presentation--reverse .presentation-image {
+    order: 2;
+}
+
+.presentation--reverse .presentation-text {
+    order: 1;
 }
