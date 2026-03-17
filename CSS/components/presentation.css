@@ -1,6 +1,6 @@
-.Presentation {
+.presentation {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr 1fr;
     padding: 5px;
     width: 100%;
 }
@@ -21,24 +21,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    margin: 1.3rem auto;
-    margin-right: 1rem;
-}
-
-@media (max-width: 768px) {
-    .presentation-image img {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        object-position: center top;
-        margin-right: auto;
-    }
-
-    .presentation-image {
-        margin-left: 0;
-        padding: 10px;
-    }
+    margin: 0;
 }
 
 .presentation-text {
@@ -83,4 +66,25 @@
 .presentation--reverse .presentation-text {
     order: 1;
     padding-left: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .presentation {
+        grid-template-columns: 1fr;
+    }
+
+    .presentation-image img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-position: center top;
+        margin-right: auto;
+    }
+
+    .presentation-image {
+        margin-left: 0;
+        padding: 10px;
+    }
 }
