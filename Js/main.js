@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function initNavbarEffects() {
     const navbar = document.querySelector(".navbar-wrapper");
-    const heroe = document.querySelector(".hero");
+    const hero = document.querySelector(".hero");
 
     const placeholder = document.createElement("div");
     placeholder.style.height = navbar.offsetHeight + "px";
@@ -22,8 +22,8 @@ function initNavbarEffects() {
     }
 
     window.addEventListener("scroll", function () {
-        const heroeHeight = heroe.offsetHeight;
-        if (window.scrollY > heroeHeight / 2) {
+        const heroHeight = hero.offsetHeight;
+        if (window.scrollY > heroHeight / 2) {
             placeholder.style.display = "block"; // Ocupa el espacio
             navbar.classList.add("sticky");
         } else {
@@ -41,49 +41,48 @@ function initNavbarEffects() {
 }
 
 function dropdownMenuResponsiveAnimations() {
-    function dropdownMenuResponsiveAnimations() {
-        if (window.innerWidth >= 992) return;
+    if (window.innerWidth >= 992) return;
 
-        document.querySelectorAll('.navbar .dropdown-toggle').forEach(toggle => {
-            // Eliminar el atributo que Bootstrap usa para interceptar el click
-            toggle.removeAttribute('data-bs-toggle');
+    document.querySelectorAll('.navbar .dropdown-toggle').forEach(toggle => {
+        // Eliminar el atributo que Bootstrap usa para interceptar el click
+        toggle.removeAttribute('data-bs-toggle');
 
-            toggle.addEventListener('click', function (e) {
-                e.preventDefault();
-                e.stopPropagation();
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
 
-                const menu = this.nextElementSibling;
-                const isOpen = menu.classList.contains('show');
+            const menu = this.nextElementSibling;
+            const isOpen = menu.classList.contains('show');
 
-                // Cerrar todos los demás
-                document.querySelectorAll('.navbar .dropdown-menu').forEach(m => {
-                    m.classList.remove('show');
-                });
-                document.querySelectorAll('.navbar .dropdown-toggle').forEach(t => {
-                    t.classList.remove('show');
-                    t.closest('.nav-item').classList.remove('show');
-                });
-
-                // Abrir el actual si estaba cerrado
-                if (!isOpen) {
-                    menu.classList.add('show');
-                    this.classList.add('show');
-                    this.closest('.nav-item').classList.add('show');
-                }
+            // Cerrar todos los demás
+            document.querySelectorAll('.navbar .dropdown-menu').forEach(m => {
+                m.classList.remove('show');
             });
-        });
+            document.querySelectorAll('.navbar .dropdown-toggle').forEach(t => {
+                t.classList.remove('show');
+                t.closest('.nav-item').classList.remove('show');
+            });
 
-        // Cerrar al hacer click fuera
-        document.addEventListener('click', function (e) {
-            if (!e.target.closest('.navbar')) {
-                document.querySelectorAll('.navbar .dropdown-menu').forEach(m => m.classList.remove('show'));
-                document.querySelectorAll('.navbar .dropdown-toggle').forEach(t => {
-                    t.classList.remove('show');
-                    t.closest('.nav-item').classList.remove('show');
-                });
+            // Abrir el actual si estaba cerrado
+            if (!isOpen) {
+                menu.classList.add('show');
+                this.classList.add('show');
+                this.closest('.nav-item').classList.add('show');
             }
         });
-    }
+    });
+
+    // Cerrar al hacer click fuera
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.navbar')) {
+            document.querySelectorAll('.navbar .dropdown-menu').forEach(m => m.classList.remove('show'));
+            document.querySelectorAll('.navbar .dropdown-toggle').forEach(t => {
+                t.classList.remove('show');
+                t.closest('.nav-item').classList.remove('show');
+            });
+        }
+    });
+
 
 }
 

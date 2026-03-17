@@ -74,16 +74,22 @@
         grid-template-columns: 1fr;
     }
 
+    .presentation-text {
+        padding-left: 1rem !important;
+        align-items: center;
+    }
+
     .presentation-image img {
         object-fit: cover;
         width: 100%;
         height: auto;
         max-height: 300px;
         object-position: center top;
-        margin-right: auto;
     }
 
     .presentation-image {
+        align-items: center;
+        justify-items: center;
         margin-left: 0;
         padding: 10px;
     }
