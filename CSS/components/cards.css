@@ -30,6 +30,7 @@
 
 .card-body h5 {
     text-decoration: underline var(--color-accent) 3px solid;
+    text-decoration-skip-ink: none;
 
 }
 

@@ -7,6 +7,10 @@
     margin-top: 2.5rem;
 }
 
+.central-container-text {
+    text-align: center;
+}
+
 .central-container h1 {
     font-size: 2.8rem;
     font-weight: 700;
@@ -15,11 +19,12 @@
 }
 
 .central-container h5 {
+    margin: 0 auto 10px;
     font-weight: 600;
     color: #ffffff;
     background-color: var(--color-primary);
-    width: max-content;
-    margin-bottom: 10px;
+    max-width: max-content;
+
 }
 
 .central-container p {
