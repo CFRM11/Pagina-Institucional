@@ -10,8 +10,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function initNavbarEffects() {
     const navbar = document.querySelector(".navbar-wrapper");
-    const hero = document.querySelector(".hero");
 
+    //  detectar triggers
+    const heroTrigger = document.querySelector(".hero-trigger");
+    let trigger = heroTrigger;
+
+    //  fallback automático si no hay hero-trigger
+    if (!trigger) {
+        trigger = document.createElement("div");
+        trigger.classList.add("nav-trigger");
+        navbar.parentNode.insertBefore(trigger, navbar);
+    }
+
+    //  placeholder 
     const placeholder = document.createElement("div");
     placeholder.style.height = navbar.offsetHeight + "px";
     placeholder.style.display = "none";
@@ -21,23 +32,27 @@ function initNavbarEffects() {
         placeholder.style.height = navbar.offsetHeight + "px";
     }
 
-    window.addEventListener("scroll", function () {
-        const heroHeight = hero.offsetHeight;
-        if (window.scrollY > heroHeight / 2) {
-            placeholder.style.display = "block"; // Ocupa el espacio
-            navbar.classList.add("sticky");
-        } else {
-            placeholder.style.display = "none"; // Lo libera
-            navbar.classList.remove("sticky");
-        }
-    });
+    //  observer
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            const isSticky = !entry.isIntersecting;
 
-    window.addEventListener("resize", function () {
-        updatePlaceHolderHeight();
-    }
+            navbar.classList.toggle("sticky", isSticky);
+            placeholder.style.display = isSticky ? "block" : "none";
+
+            if (isSticky) {
+                updatePlaceHolderHeight();
+            }
+        },
+        { threshold: 0 }
     );
-    updatePlaceHolderHeight();
 
+    observer.observe(trigger);
+
+    // resize
+    window.addEventListener("resize", updatePlaceHolderHeight);
+
+    updatePlaceHolderHeight();
 }
 
 function dropdownMenuResponsiveAnimations() {

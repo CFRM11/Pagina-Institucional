@@ -5,6 +5,14 @@
     transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
+.nav-trigger,
+.hero-trigger {
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .navbar-wrapper.sticky {
     position: fixed;
     top: 0;
