@@ -13,5 +13,9 @@ async function loadComponents() {
         html = html.replace(/(src|href)="(Assets|CSS|Js)\//g, `$1="${basePath}$2/`);
 
         element.innerHTML = html;
+
+        element.querySelectorAll("[data-nav]").forEach(a => {
+            a.href = basePath + a.getAttribute("data-nav");
+        });
     }
 }
