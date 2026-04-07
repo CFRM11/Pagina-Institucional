@@ -14,6 +14,10 @@
     padding: 0 4rem;
 }
 
+#horarios {
+    background-image: url(../../Assets/Imgs/hero/hero_horarios.png);
+}
+
 .hero::before {
     content: "";
     position: absolute;
