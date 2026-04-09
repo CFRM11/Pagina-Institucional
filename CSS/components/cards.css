@@ -45,6 +45,7 @@
     .cards-grid {
         width: 95%;
         gap: 1rem;
+        height: 85%;
     }
 
     .cards-grid .card {
