@@ -38,6 +38,7 @@
     letter-spacing: -1px;
     text-align: left;
     text-decoration: underline var(--color-accent) 5px solid;
+    text-decoration-skip-ink: none;
 }
 
 .presentation-text h5 {

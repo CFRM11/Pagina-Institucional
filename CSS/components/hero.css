@@ -18,6 +18,10 @@
     background-image: url(../../Assets/Imgs/hero/hero_horarios.png);
 }
 
+#reglamento {
+    background-image: url(../../Assets/Imgs/hero/hero_reglamento.png);
+}
+
 .hero::before {
     content: "";
     position: absolute;
