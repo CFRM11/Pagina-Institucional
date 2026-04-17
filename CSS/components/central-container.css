@@ -9,6 +9,7 @@
 
 .central-container-text {
     text-align: center;
+    justify-content: center;
 }
 
 .central-container h1 {
@@ -32,4 +33,17 @@
     font-size: 1rem;
     font-weight: 400;
     max-width: 600px;
+}
+
+
+
+.central-image {
+    width: 85%;
+    height: auto;
+    margin: 2rem auto 0;
+}
+
+.central-image img {
+    width: 100%;
+    height: auto;
 }
